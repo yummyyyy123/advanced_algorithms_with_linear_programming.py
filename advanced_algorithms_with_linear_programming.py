@@ -54,7 +54,7 @@ def mergesort(arr: List[float]) -> List[float]:
     result.extend(left[i:]); result.extend(right[j:])
     return result
 
-# ----------------------------- Graph Algorithms -----------------------------
+#Graph Algorithms
 
 class Graph:
     def __init__(self):
@@ -148,7 +148,7 @@ def kruskal_mst(edges: List[Tuple[float, Any, Any]]):
             mst.append((u,v,w))
     return mst
 
-# ----------------------------- Dynamic Programming -----------------------------
+#Dynamic Programming
 
 def knapsack_01(weights: List[int], values: List[int], capacity: int) -> Tuple[int,List[int]]:
     n = len(weights)
@@ -170,7 +170,7 @@ def knapsack_01(weights: List[int], values: List[int], capacity: int) -> Tuple[i
     chosen.reverse()
     return res, chosen
 
-# ----------------------------- Greedy Algorithms -----------------------------
+#Greedy Algorithms
 
 def interval_scheduling(intervals: List[Tuple[int,int]]) -> List[Tuple[int,int]]:
     # choose max non-overlapping intervals by earliest finish time
@@ -183,7 +183,7 @@ def interval_scheduling(intervals: List[Tuple[int,int]]) -> List[Tuple[int,int]]
             last_end = e
     return result
 
-# ----------------------------- Genetic Algorithm (TSP heuristic) -----------------------------
+#Genetic Algorithm (TSP heuristic)
 
 def tour_length(tour: List[int], dist_matrix: List[List[float]]) -> float:
     n = len(tour)
@@ -248,7 +248,7 @@ def genetic_tsp(dist_matrix: List[List[float]], pop_size=100, generations=200,
     best_tour = population[best_idx]
     return best_tour, tour_length(best_tour, dist_matrix)
 
-# ----------------------------- Simulated Annealing -----------------------------
+#Simulated Annealing
 
 def rastrigin(x: List[float]) -> float:
     n = len(x)
@@ -277,7 +277,7 @@ def simulated_annealing(func, dim=2, init=None, T0=10.0, cooling=0.99, steps=100
         T *= cooling
     return best, best_val
 
-# ----------------------------- Linear Programming -----------------------------
+#Linear Programming
 
 def lp_example_scipy(c, A_ub=None, b_ub=None, A_eq=None, b_eq=None, bounds=None):
     if not SCIPY_AVAILABLE:
@@ -325,7 +325,7 @@ def resource_allocation_example():
     else:
         print('No LP solver installed. Install scipy or pulp to run this example.')
 
-# ----------------------------- Utilities & Demo Runner -----------------------------
+#Utilities & Demo Runner 
 
 def demo_sorting():
     arr = [random.randint(0,1000) for _ in range(20)]
@@ -420,3 +420,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
